@@ -1,0 +1,30 @@
+.botao{
+  width: 140px;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 1.0rem;
+  margin-top: 5px;
+}
+
+p{
+  font-size: 1.0rem;
+  color: #8a8a8a;
+}
+
+img{ 
+  height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+ 
+}
+
+.card {
+  background-color: rgb(251, 251, 251);
+  padding: 15px 10px;
+  border-radius: 8px;
+  -webkit-box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
+  -moz-box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
+  box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
+}

@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="red">
+
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>{{titulo}}</ion-title>
+
+    <ion-buttons slot="primary">
+      <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar color="success">
+    <ion-button class="botao" color="light" shape="round" fill="outline" *ngFor="let categoria of categoria">{{categoria}}</ion-button>
+  </ion-toolbar>
+
+  <ion-row>
+    <ion-col size="6" *ngFor="let salgados of listaSalgados">
+      <ion-row class="ion-text-center">
+        <ion-col class="card">
+          <ion-row>
+            <ion-col>
+              <img [src]="salgados.imagem">
+            </ion-col>
+          </ion-row>
+          <h1>{{salgados.nome}}</h1>
+          <p>R$ {{salgados.preco}}</p>
+          <ion-button color="yellow" routerLink="/detalhes">Detalhes</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+ 
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="red">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

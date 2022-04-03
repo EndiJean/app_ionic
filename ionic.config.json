@@ -1,0 +1,7 @@
+{
+  "name": "appsalgado",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
