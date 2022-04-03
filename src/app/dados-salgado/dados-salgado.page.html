@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar *ngIf="salgado">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{salgado.nome}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="salgado" class="ion-text-center">
+    <ion-card-header>
+     <img [src]="salgado.imagem">
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{salgado.descricao}}</p>
+    </ion-card-content>   
+  </ion-card>
+</ion-content>
+
+<ion-toolbar color="medium">
+
+  <h5>R$ {{salgado.preco}}</h5>
+  
+
+    <ion-button slot="primary">
+      <ion-icon slot="start" name="add"></ion-icon>
+    </ion-button>
+    <ion-input slot="primary" placeholder="1"></ion-input>
+    <ion-button slot="primary">
+      <ion-icon slot="start" name="remove"></ion-icon>
+    </ion-button>
+</ion-toolbar>
+
