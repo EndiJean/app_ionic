@@ -12,10 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'detalhes',
-    loadChildren: () => import('./detalhes/detalhes.module').then( m => m.DetalhesPageModule)
-  },
-  {
     path: 'dados-salgado',
     loadChildren: () => import('./dados-salgado/dados-salgado.module').then( m => m.DadosSalgadoPageModule)
   },

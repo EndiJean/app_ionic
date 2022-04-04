@@ -17,7 +17,9 @@
 
 <ion-content>
   <ion-toolbar color="success">
-    <ion-button class="botao" color="light" shape="round" fill="outline" *ngFor="let categoria of categoria">{{categoria}}</ion-button>
+    <ion-slides>
+      <ion-button class="botao" color="light" shape="round" fill="outline" *ngFor="let categorias of categorias">{{categorias}}</ion-button>
+    </ion-slides>
   </ion-toolbar>
 
   <ion-row>
@@ -36,8 +38,6 @@
       </ion-row>
     </ion-col>
   </ion-row>
-
- 
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="red">
