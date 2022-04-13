@@ -10,8 +10,8 @@ import { DadosService } from '../services/dados.service';
 })
 export class DadosSalgadoPage implements OnInit {
 
+  public pathImgs   = '../../assets/img/';
   salgado: ISalgado;
-
   public qtd = 1;
   public valor = 0;
 
