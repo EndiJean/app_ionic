@@ -36,12 +36,14 @@
     height: 100px;
     max-width: 100%;
     max-height: 100%;
+    border-radius: 5px;
 }
 
 .card h1 {
     font-weight: bold;
     font-size: 1.0rem;
     margin-top: 5px;
+    padding-bottom: 20px;
 }
 
 .card p {
@@ -52,4 +54,5 @@
 .card ion-button {
     text-transform: capitalize;
     --background: var( --ion-color-yellow);
+    margin-top: 15px;
 }
