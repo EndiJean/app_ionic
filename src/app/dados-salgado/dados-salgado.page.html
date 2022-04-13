@@ -1,44 +1,42 @@
 <ion-header>
-  <ion-toolbar *ngIf="salgado">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>{{salgado.nome}}</ion-title>
-  </ion-toolbar>
+    <ion-toolbar *ngIf="salgado">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{salgado.nome}}</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card *ngIf="salgado" class="ion-text-center">
-    <ion-card-header>
-     <img [src]="salgado.imagem">
-    </ion-card-header>
+    <ion-card *ngIf="salgado" class="ion-text-center">
+        <ion-card-header>
+            <img [src]="salgado.imagem">
+        </ion-card-header>
 
-    <ion-card-content>
-      <p>{{salgado.descricao}}</p>
-    </ion-card-content>   
-  </ion-card>
+        <ion-card-content>
+            <p>{{salgado.descricao}}</p>
+        </ion-card-content>
+    </ion-card>
 
 </ion-content>
 
-<ion-row>
-  <ion-col size="6" >
-    <h5>R$ {{valor}}</h5>
-  </ion-col>
-    <ion-col size="2" >
-    <ion-button color="red" (click)="somar()">
-      <ion-icon name="add"></ion-icon>
-    </ion-button>
-  </ion-col>
+<ion-row class>
+    <ion-col size="6">
+        <h5>{{formataValor(valor)}}</h5>
+    </ion-col>
+    <ion-col size="2">
+        <ion-button color="red" (click)="somar()">
+            <ion-icon name="add"></ion-icon>
+        </ion-button>
+    </ion-col>
 
-  <ion-col size="2" class="ion-text-center">
-    <h6>{{qtd}}</h6>
-</ion-col>
+    <ion-col size="2" class="ion-text-center">
+        <ion-input type="number" [(ngModel)]="qtd"></ion-input>
+    </ion-col>
 
-  <ion-col size="2">
-    <ion-button color="red" (click)="subtrair()">
-      <ion-icon name="remove"></ion-icon>
-    </ion-button>
-  </ion-col>
-  </ion-row>
-
-
+    <ion-col size="2">
+        <ion-button color="red" (click)="subtrair()">
+            <ion-icon name="remove"></ion-icon>
+        </ion-button>
+    </ion-col>
+</ion-row>

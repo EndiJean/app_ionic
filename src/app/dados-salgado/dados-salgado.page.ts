@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { ISalgado } from '../model/ISalgado.model';
 import { DadosService } from '../services/dados.service';
 
@@ -10,14 +11,14 @@ import { DadosService } from '../services/dados.service';
 export class DadosSalgadoPage implements OnInit {
 
   salgado: ISalgado;
-  
+
   public qtd = 1;
   public valor = 0;
 
   constructor(public dadosService: DadosService) { }
 
   ngOnInit() {
-    this.salgado = this.dadosService.pegarDados('salgado')
+    this.salgado = this.dadosService.pegarDados('salgado');
     console.log('Dado enviado', this.salgado);
     this.valorInicial();
   }
@@ -27,17 +28,24 @@ export class DadosSalgadoPage implements OnInit {
   }
 
   somar(){
-    this.qtd+=1;
+    this.qtd++;
     this.valor = this.salgado.preco * this.qtd;
   }
 
   subtrair(){
-    this.qtd-=1;
-    this.valor = this.salgado.preco * this.qtd
-    if (this.qtd < 1) {
-      this.qtd = 1
-      this.valorInicial();
+    if(this.qtd > 1){
+      this.qtd--;
+      this.valor = this.salgado.preco * this.qtd;
     }
-  }
+ }
+
+ public formataValor(valor) {
+  let retorno = '';
+  const formatar = Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  retorno = formatar.format(valor);
+  retorno = 'R$ ' + retorno;
+
+  return retorno;
+}
 
 }

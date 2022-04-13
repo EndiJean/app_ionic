@@ -1,34 +1,55 @@
-.botao{
-  width: 140px;
+.menu {
+    --background: var(--ion-color-red);
+    color: white;
+    font-size: 20px;
 }
 
-h1{
-  font-weight: bold;
-  font-size: 1.0rem;
-  margin-top: 5px;
+.slide {
+    --background: var(--ion-color-green);
+    color: white;
 }
 
-p{
-  font-size: 1.0rem;
-  color: #8a8a8a;
+.slide-actived {
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-ion-button {
-  text-transform: capitalize;
-}
-
-img{ 
-  height: 100px;
-  max-width: 100%;
-  max-height: 100%;
- 
+.slide-no-actived {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid transparent;
 }
 
 .card {
-  background-color: rgb(251, 251, 251);
-  padding: 15px 10px;
-  border-radius: 8px;
-  -webkit-box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
-  -moz-box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
-  box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
+    background-color: rgb(251, 251, 251);
+    padding: 15px 10px;
+    border-radius: 8px;
+    -webkit-box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
+    -moz-box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
+    box-shadow: -0.5px 0.5px 4px 0px rgba(121, 121, 121, 0.75);
+}
+
+.card img {
+    height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card h1 {
+    font-weight: bold;
+    font-size: 1.0rem;
+    margin-top: 5px;
+}
+
+.card p {
+    font-size: 1.0rem;
+    color: #8a8a8a;
+}
+
+.card ion-button {
+    text-transform: capitalize;
+    --background: var( --ion-color-yellow);
 }
